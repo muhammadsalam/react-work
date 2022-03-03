@@ -1,0 +1,25 @@
+.main {
+    border: 1px solid lightgray;
+    grid-column: 2 / 5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    flex-grow: 1;
+}
+
+hr {
+    width: 100%;
+}
+
+.main-grid__item {
+    min-width: 150px;
+    flex: 1 1 0;
+    box-shadow: 0 0 10px lightgray;
+}

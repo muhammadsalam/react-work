@@ -1,0 +1,18 @@
+.header {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 5;
+}
+
+.header-inner__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-inner__nav a {
+    text-decoration: none;
+    color: #141414;
+}

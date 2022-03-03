@@ -1,0 +1,22 @@
+.aside {
+    border: 1px solid lightgray;
+    grid-column: 1 / 2;
+    padding: 10px;
+}
+
+.aside ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    text-underline-position: under;
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.aside ul li {
+    line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
+}

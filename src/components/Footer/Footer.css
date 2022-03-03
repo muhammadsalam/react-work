@@ -1,0 +1,15 @@
+.footer {
+    grid-column: 1 / 5;
+    font-weight: 700;
+    font-size: 20px;
+    max-height: 70px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer span {
+    color: crimson;
+}
