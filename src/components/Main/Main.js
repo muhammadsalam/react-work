@@ -1,39 +1,25 @@
 import './Main.css';
+import { MainItems } from '../../data';
 
 export default function Main () {
     const title = "Main content";
 
-    const items = [
-        { title: "Article 1", desc: "Description 1" },
-        { title: "Article 2", desc: "Description 2" },
-        { title: "Article 3", desc: "Description 3" },
-        { title: "Article 4", desc: "Description 4" }
-    ];
+    const list = MainItems.map((elem, index) => {
+        return (
+            <div key={index} className="main-grid__item">
+                <h3>{elem.title}</h3>
+                <p>{elem.desc}</p>
+            </div>
+        );
+    });
 
     return (
         <main className="main">
             <h2>{title}</h2>
             <hr />
-            <div className="main-grid">
-            <div className="main-grid__item">
-                <h3>{items[0].title}</h3>
-                <p>{items[0].desc}</p>
-            </div>
-            <div className="main-grid__item">
-                <h3>{items[1].title}</h3>
-                <p>{items[1].desc}</p>
-            </div>
-            <div className="main-grid__item">
-                <h3>{items[2].title}</h3>
-                <p>{items[2].desc}</p>
-            </div>
-            <div className="main-grid__item">
-                <h3>{items[3].title}</h3>
-                <p>{items[3].desc}</p>
-            </div>
-            </div>
+            <div className="main-grid">{list}</div>
             <hr />
-            <b>Amount: </b> {items.length}
+            <b>Amount: </b> {MainItems.length}
         </main>
     );
 };

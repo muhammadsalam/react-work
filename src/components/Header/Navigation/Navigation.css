@@ -1,0 +1,16 @@
+.header-inner__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-inner__nav a {
+    text-decoration: none;
+    color: #141414;
+    transition: color .3s ease-out;
+}
+
+.header-inner__nav a:hover {
+    color: crimson;
+}
