@@ -11,16 +11,3 @@ export default function BlogList ({blogs, title}) {
         </div>
     );
 };
-
-// props - возвращает объект со всеми атрибутами где вызывается элемент
-
-// например <BlogList value='sad' imgSrc='wadawd' />
-// props = {
-//     value: 'sad',
-//     imgSrc: 'wadawd'
-// }
-
-// props не фиксированное название, так просто по стандарту используют
-
-// объект также можно деструктуризировать:
-// function BlogList ({href, src}) {}
