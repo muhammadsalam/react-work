@@ -1,29 +1,20 @@
 import { useState } from 'react';
 
 function Home() {
-    
-    // Что такое useState ?
-    // Это возможность ререндеринга компонента
-    // например, если менять значение переменной, то в компоненте оно не будет меняться, а просто останется старым. Для этого используют ререндеринг компонента, чтобы можно было видеть новые значения.
-
-    // ps. Angular позволяет делать это автоматически, без постороннего.
-
-    const [name, setName] = useState('mario');
-
-    // const [1, 2] - вместо 1 - название переменной, а вместо 2 - название функции, которая позволяет изменять эту переменную
-    
-    const [age, setAge] = useState(18);
-
-    const handleClick = () => {
-        setName('Luigi');
-        setAge('30');
-    };
+    const [blogs, setBlogs] = useState([
+        { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
+        { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
+        { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
+    ]);
 
     return ( 
         <div className="home">
-            <h2>Homepage</h2>
-            <p>{name} is {age} years old</p>
-            <button onClick={handleClick}>Click me</button>
+            {blogs.map(blog => (
+                <div className="blog-preview" key={blog.id}>
+                    <h2>{ blog.title }</h2>
+                    <p>Written byt { blog.author }</p>
+                </div>  
+            ))}
         </div>
     );
 }
