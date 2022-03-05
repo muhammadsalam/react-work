@@ -1,0 +1,20 @@
+.progress-bar {
+    height: 40px;
+}
+
+.progress-bar div {
+    height: 100%;
+    display: block;
+    background-color: #008afb;
+    position: relative;
+    transition: width .2s ease-out;
+}
+
+.progress-bar span {
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
