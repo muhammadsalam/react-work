@@ -8,6 +8,8 @@ function Home() {
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
     ]);
 
+    const [name, setName] = useState('mario')
+
     const handleDelete = (id) => {
         const newBlogs = blogs.filter(blog => blog.id !== id);
         setBlogs(newBlogs);
@@ -15,8 +17,13 @@ function Home() {
 
     useEffect(() => {
         console.log('use effect ran');
-        console.log(blogs);
-    });
+        console.log(name);
+    }, [name]);
+    // [] означает, что зависимостей нет
+    // запустится только при первом рендеринге
+    // (обновление страницы)
+
+    // [name] - зависит от переменной name и будет вызываться каждый раз, когда меняется эта переменная
 
     // useEffect - функция, которая вызывается при каждом
     // рендеринге страницы. То есть, если изменить useState - это
@@ -25,6 +32,8 @@ function Home() {
     return ( 
         <div className="home">
             <BlogList blogs={blogs} title="All blogs!" handleDelete={handleDelete}/>
+            <button onClick={() => setName('Luigi')}>change name</button>
+            <p>{name}</p>
         </div>
     );
 }
