@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import BlogList from '../BlogList';
+import BlogList from './BlogList';
 
 function Home() {
     const [blogs, setBlogs] = useState([
